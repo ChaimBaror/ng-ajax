@@ -4,11 +4,13 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { GitDbComponent } from './comps/git-db/git-db.component';
+import { GitTestComponent } from './comps/git-test/git-test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GitDbComponent
+    GitDbComponent,
+    GitTestComponent
   ],
   imports: [
     BrowserModule ,HttpClientModule

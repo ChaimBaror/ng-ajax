@@ -23,6 +23,8 @@ export class GitDbComponent implements OnInit {
       this.keyarr.push(key)
       this.myService.httpget(this.myService.urlindex[key])
         .subscribe(strgRes => this.dbAjaxContent[key] = strgRes);
+        console.log('this is key' +key);
+        
     }
 
   }

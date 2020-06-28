@@ -14,8 +14,8 @@ export class GitDbComponent implements OnInit {
 
   ngOnInit(): void {
 
-    // this.myService.httpget(this.myService.urlindex.txt)
-    //   .subscribe(strgRes => this.dbAjaxContent["txt"] = strgRes);
+    this.myService.httpget(this.myService.urlindex.txt)
+      .subscribe(strgRes => this.dbAjaxContent["txt"] = strgRes);
 
 
     for (let key in this.myService.urlindex) {

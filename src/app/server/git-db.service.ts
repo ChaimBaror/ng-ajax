@@ -18,7 +18,7 @@ export class GitDbService {
   constructor(private http : HttpClient) { }
 
   httpget(url:string) : Observable<string>{
-    return this.http.get<string>(url)
+    return this.http.get<string>(url,{responseType :'text'})
 
   }
 

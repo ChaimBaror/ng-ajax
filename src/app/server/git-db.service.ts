@@ -7,19 +7,24 @@ import { Observable } from 'rxjs';
 })
 export class GitDbService {
 
-  public urlindex = {
-    'js'   :'https://raw.githubusercontent.com/ChaimBaror/ajax/master/db/doc.js', 
-    'txt'  :'https://raw.githubusercontent.com/ChaimBaror/ajax/master/db/doc.txt', 
-    'json' :'https://raw.githubusercontent.com/ChaimBaror/ajax/master/db/doc.json', 
-    'html' :'https://raw.githubusercontent.com/ChaimBaror/ajax/master/db/doc.html', 
-  }
+  // public urlindex = {
+  //   'js'   :'https://raw.githubusercontent.com/ChaimBaror/ajax/master/db/doc.js', 
+  //   'txt'  :'https://raw.githubusercontent.com/ChaimBaror/ajax/master/db/doc.txt', 
+  //   'json' :'https://raw.githubusercontent.com/ChaimBaror/ajax/master/db/doc.json', 
+  //   'html' :'https://raw.githubusercontent.com/ChaimBaror/ajax/master/db/doc.html', 
+  // }
 
 
   constructor(private http : HttpClient) { }
 
-  httpget(url:string) : Observable<string>{
-    return this.http.get<string>(url,{responseType :'text'})
+  httpget() : Observable<any>{
+    return this.http.get<any>('https://raw.githubusercontent.com/ChaimBaror/ajax/master/db/doc.json')
 
   }
+
+  // httpget(url:string) : Observable<string>{
+  //   return this.http.get<string>(url,{responseType:'text'})
+
+  // }
 
 }

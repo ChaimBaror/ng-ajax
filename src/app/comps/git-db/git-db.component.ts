@@ -10,22 +10,28 @@ export class GitDbComponent implements OnInit {
 
   constructor(private myService: GitDbService) { }
   keyarr = []
-  dbAjaxContent = {}
+  dbAjaxContent ={}
+
+
 
   ngOnInit(): void {
 
-    this.myService.httpget(this.myService.urlindex.txt)
-      .subscribe(strgRes => this.dbAjaxContent["txt"] = strgRes);
+
+        this.myService.httpget().subscribe(strgRes =>
+           this.dbAjaxContent = strgRes);
+           console.log(this. dbAjaxContent);
+           
+
+    // this.myService.httpget(this.myService.urlindex.txt)
+    //   .subscribe(strgRes => this.dbAjaxContent["txt"] = strgRes);
 
 
-    for (let key in this.myService.urlindex) {
-
-      this.keyarr.push(key)
-      this.myService.httpget(this.myService.urlindex[key])
-        .subscribe(strgRes => this.dbAjaxContent[key] = strgRes);
-        console.log('this is key' +key);
-        
-    }
+    // for (let key in this.myService) {
+    //   this.keyarr.push(key)
+    //   this.myService.httpget(this.myService.urlindex[key])
+    //     .subscribe(strgRes => this.dbAjaxContent[key] = strgRes);
+    //   console.log('this is key' + key);
+    // }
 
   }
 }

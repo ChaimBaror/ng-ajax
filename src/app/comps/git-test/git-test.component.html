@@ -1,1 +1,23 @@
-<p>git-test works!</p>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">ucountry</th>
+        <th scope="col">infected</th>
+        <th scope="col">deceased</th>
+        <th scope="col">tested</th>
+        <th scope="col">last Updated Apify</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let user of post">
+        <th scope="row">{{user.id}}</th>
+        <td>{{user.country}}</td>
+        <td>{{user.infected}}</td>
+        <td>{{user.deceased}}</td>
+        <td>{{user.tested}}</td>
+        <td>{{user.lastUpdatedApify}}</td>
+      </tr>
+    </tbody>
+  </table>
+  

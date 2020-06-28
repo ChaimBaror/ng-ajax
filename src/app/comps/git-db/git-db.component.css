@@ -1,0 +1,12 @@
+.col{
+    padding: 5px;
+width: 20%;
+height: auto;
+border: 1px solid fuchsia;
+
+}
+
+.conter{
+    display: flex;
+    justify-content: space-between;
+}
